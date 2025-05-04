@@ -76,7 +76,7 @@
         <div class="search-box input-group">
             <span class="input-group-text"><i class="bi bi-search"></i></span>
             <input type="text" class="form-control" placeholder="Search by Artist, Event or Venue">
-            <button class="btn btn-primary">Search</button>
+            <button class="btn btn-primary">Searche</button>
         </div>
     </div>
 </section>
