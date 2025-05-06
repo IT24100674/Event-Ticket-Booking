@@ -47,7 +47,7 @@
 
         <div class="d-flex">
             <!-- "My Post" Button -->
-            <a href="#">
+            <a href="myPost.jsp">
                 <button class="btn btn-outline-primary ms-3">My Posts</button>
             </a>
             <!-- "Create Post" Button -->
@@ -75,7 +75,7 @@
         <p>Enjoy a seamless booking experience with fast checkout and secure payments.</p>
         <div class="search-box input-group">
             <span class="input-group-text"><i class="bi bi-search"></i></span>
-            <input type="text" class="form-control" placeholder="Search by Artist, Event or Venue">
+            <input type="text" class="form-control" placeholder="Search by Events.">
             <button class="btn btn-primary">Search</button>
         </div>
     </div>
