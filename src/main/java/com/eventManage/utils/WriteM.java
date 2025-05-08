@@ -1,4 +1,4 @@
-package com.utils;
+package com.eventManage.utils;
 
 import java.io.FileWriter;
 import java.io.IOException;

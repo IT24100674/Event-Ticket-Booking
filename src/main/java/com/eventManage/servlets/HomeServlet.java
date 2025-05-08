@@ -1,6 +1,6 @@
-package com.servlets;
+package com.eventManage.servlets;
 
-import com.utils.FileParser;
+import com.eventManage.utils.FileParser;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

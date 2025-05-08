@@ -1,4 +1,4 @@
-package com.utils;
+package com.eventManage.utils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

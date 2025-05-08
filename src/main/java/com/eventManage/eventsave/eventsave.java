@@ -1,6 +1,6 @@
-package com.eventsave;
+package com.eventManage.eventsave;
 
-import com.utils.WriteM;
+import com.eventManage.utils.WriteM;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -10,9 +10,9 @@ import java.io.*;
 import java.nio.file.Paths;
 
 @MultipartConfig(
-        fileSizeThreshold = 1024 * 1024 * 1,  // 1MB
-        maxFileSize = 1024 * 1024 * 10,       // 10MB
-        maxRequestSize = 1024 * 1024 * 15     // 15MB
+        fileSizeThreshold = 1024 * 1024 * 1,
+        maxFileSize = 1024 * 1024 * 10,
+        maxRequestSize = 1024 * 1024 * 15
 )
 @WebServlet("/createevent")
 public class eventsave extends HttpServlet {
