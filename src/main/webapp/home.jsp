@@ -44,9 +44,7 @@
     <div class="container">
         <a class="navbar-brand fw-bold"><span class="text-primary">Ticket</span>Wave<span class="small">.lk</span></a>
         <div class="d-flex">
-            <a href="myPost.jsp">
-                <button class="btn btn-outline-primary ms-3">My Posts</button>
-            </a>
+
             <a href="createPost.jsp">
                 <button class="btn btn-outline-primary ms-3">Create Post</button>
             </a>
@@ -54,7 +52,7 @@
     </div>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="Register.jsp">Register</a></li>
+
             <li class="nav-item">
                 <a href="./Sign%20in.jsp">
                     <button class="btn btn-primary"><i class="bi bi-person-circle"></i> Sign In</button>
@@ -91,7 +89,7 @@
                     <p><i class="bi bi-calendar"></i> <%= event.getDate() %></p>
                     <p><i class="bi bi-geo-alt"></i> <%= event.getLocation() %></p>
                     <p><strong><%= event.getTicketPrice() %> LKR</strong></p>
-                    <button class="btn btn-primary w-100">Buy Now</button>
+                    <button class="btn btn-primary w-100" >Buy Now</button>
                 </div>
             </div>
         </div>

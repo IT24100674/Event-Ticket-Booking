@@ -1,13 +1,13 @@
 
-package com.eventManage.eventsave;
+package com.eventManage.servlets;
 
 import com.eventManage.model.Event;
 import com.eventManage.utils.WriteM;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
 import java.io.*;
 import java.nio.file.Paths;
 

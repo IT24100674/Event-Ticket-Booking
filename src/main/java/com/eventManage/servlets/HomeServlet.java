@@ -4,10 +4,10 @@ package com.eventManage.servlets;
 import com.eventManage.model.Event;
 import com.eventManage.utils.FileParser;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
-import javax.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+import jakarta.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.util.List;
 
