@@ -3,7 +3,7 @@ package com.eventManage.servlets;
 
 
 import com.eventManage.model.Booking;
-import com.example.service.BookingService;
+import com.eventManage.servlets.BookingService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

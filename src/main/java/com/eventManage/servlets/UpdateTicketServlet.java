@@ -13,7 +13,7 @@ import java.util.List;
 
 
 
-import com.example.service.BookingService;
+import com.eventManage.servlets.BookingService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
