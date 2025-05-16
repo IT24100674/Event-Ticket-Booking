@@ -80,51 +80,5 @@ public class UserService implements UserServiceInterface {
         return updated;
     }
 
-    public boolean validateUser(String username, String password, String filePath) throws IOException {
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts.length > 1 && parts[0].equals(username) && parts[1].equals(password)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
 
-    /**
-     * Deletes the user from the file by username.
-     * Returns true if a user was deleted, false if user not found.
-     */
-    public boolean deleteUser(String username, String filePath) throws IOException {
-        File inputFile = new File(filePath);
-        File tempFile = new File(filePath + ".tmp");
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))) {
-
-            String currentLine;
-            boolean deleted = false;
-
-            while ((currentLine = reader.readLine()) != null) {
-                if (!currentLine.startsWith(username + ",")) {
-                    writer.write(currentLine);
-                    writer.newLine();
-                } else {
-                    deleted = true;
-                }
-            }
-
-            if (deleted) {
-                if (!inputFile.delete() || !tempFile.renameTo(inputFile)) {
-                    throw new IOException("Failed to replace original file after deletion.");
-                }
-            } else {
-                tempFile.delete();
-            }
-
-            return deleted;
-        }
-    }
 }
