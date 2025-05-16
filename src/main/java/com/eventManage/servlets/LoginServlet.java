@@ -1,9 +1,8 @@
+
 package com.eventManage.servlets;
 
-package com.eventManage.controller;
-
-import com.eventManage.servlets.User;
-import com.eventManage.model.UserService;
+import com.eventManage.model.User;
+import com.eventManage.utils.UserService;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
