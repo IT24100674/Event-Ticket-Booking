@@ -6,6 +6,10 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
   <display-name>Archetype Created Web Application</display-name>
 
+    <welcome-file-list>
+        <welcome-file>admin.jsp</welcome-file>
+    </welcome-file-list>
+
 
   <context-param>
     <description>Location to store uploaded files</description>
