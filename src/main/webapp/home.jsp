@@ -1,14 +1,10 @@
-
-<%@ page import="java.util.List" %>
-<%@ page import="com.eventManage.model.Event" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" %>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TicketWave.lk</title>
+    <title>TicketWave.lk - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -23,13 +19,6 @@
             max-width: 600px;
             margin: 20px auto;
         }
-        .event-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
         .navbar .nav-link {
             color: black;
         }
@@ -43,22 +32,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand fw-bold"><span class="text-primary">Ticket</span>Wave<span class="small">.lk</span></a>
-        <div class="d-flex">
-
-            <a href="createPost.jsp">
-                <button class="btn btn-outline-primary ms-3">Create Post</button>
-            </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="payment.jsp">Make Payment</a></li>
+                <li class="nav-item"><a class="nav-link" href="createPost.jsp">Create Post</a></li>
+                <li class="nav-item">
+                    <a href="Sign%20in.jsp">
+                        <button class="btn btn-primary"><i class="bi bi-person-circle"></i> Sign In</button>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-
-            <li class="nav-item">
-                <a href="./Sign%20in.jsp">
-                    <button class="btn btn-primary"><i class="bi bi-person-circle"></i> Sign In</button>
-                </a>
-            </li>
-        </ul>
     </div>
 </nav>
 
@@ -68,45 +55,12 @@
         <p>Enjoy a seamless booking experience with fast checkout and secure payments.</p>
         <div class="search-box input-group">
             <span class="input-group-text"><i class="bi bi-search"></i></span>
-            <input type="text" class="form-control" placeholder="Search by Events.">
+            <input type="text" class="form-control" placeholder="Search by Event.">
             <button class="btn btn-primary">Search</button>
         </div>
     </div>
 </section>
 
-<div class="container mt-4">
-    <div class="row">
-        <%
-            List<Event> events = (List<Event>) request.getAttribute("events");
-            if (events != null) {
-                for (Event event : events) {
-        %>
-        <div class="col-md-3">
-            <div class="card event-card shadow-sm">
-                <img src="images/<%= event.getImageName() %>" alt="<%= event.getName() %>">
-                <div class="card-body">
-                    <h5 class="card-title"><%= event.getName() %></h5>
-                    <p><i class="bi bi-calendar"></i> <%= event.getDate() %></p>
-                    <p><i class="bi bi-geo-alt"></i> <%= event.getLocation() %></p>
-                    <p><strong><%= event.getTicketPrice() %> LKR</strong></p>
-                    <button class="btn btn-primary w-100" >Buy Now</button>
-                </div>
-            </div>
-        </div>
-        <%
-            }
-        } else {
-        %>
-        <div class="col-12 text-center">
-            <p>No events available.</p>
-        </div>
-        <%
-            }
-        %>
-    </div>
-</div>
-
-<p>&nbsp;&nbsp;&nbsp;</p>
 <div class="container-fluid bg-dark text-white py-4">
     <div class="container">
         <h3>Contact Us</h3>

@@ -1,8 +1,4 @@
-
-<%@ page language="java" contentType="text/html; charset=UTF-8"  %>
-
-
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,37 +33,30 @@
             border-radius: 20px;
             padding: 5px 15px;
         }
-
     </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand fw-bold"><span class="text-primary">Ticket</span>Wave<span class="small">.lk</span></a>
-
-        <div class="d-flex">
-            <!-- "My Post" Button -->
-            <a href="#">
-                <button class="btn btn-outline-primary ms-3">My Posts</button>
-            </a>
-            <!-- "Create Post" Button -->
-            <a href="createPost.jsp">
-                <button class="btn btn-outline-primary ms-3">Create Post</button>
-            </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="payment.jsp">Make Payment</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">My Posts</a></li>
+                <li class="nav-item"><a class="nav-link" href="createPost.jsp">Create Post</a></li>
+                <li class="nav-item"><a class="nav-link" href="Register.jsp">Register</a></li>
+                <li class="nav-item">
+                    <a href="./Sign%20in.jsp">
+                        <button class="btn btn-primary"><i class="bi bi-person-circle"></i> Sign In</button>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="Register.jsp">Register</a></li>
-            <li class="nav-item">
-                <a href="./Sign%20in.jsp">
-                    <button class="btn btn-primary"><i class="bi bi-person-circle"></i> Sign In</button>
-                </a>
-            </li>
-        </ul>
-    </div>
 </nav>
-
 
 <section class="hero-section">
     <div class="container">
@@ -81,7 +70,6 @@
     </div>
 </section>
 
-<p>&nbsp;&nbsp;&nbsp;</p>
 <div class="container-fluid bg-dark text-white py-4">
     <div class="container">
         <h3>Contact Us</h3>
@@ -90,7 +78,6 @@
     </div>
 </div>
 
-<script>window.location.replace("<%= request.getContextPath() %>/home");
-</script>
+<script>window.location.replace("<%= request.getContextPath() %>/home");</script>
 </body>
 </html>
