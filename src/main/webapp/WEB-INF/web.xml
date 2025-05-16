@@ -3,7 +3,7 @@
         "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
         "http://java.sun.com/dtd/web-app_2_3.dtd">
 
-<web-app>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
   <display-name>Archetype Created Web Application</display-name>
 
 
@@ -13,5 +13,41 @@
     <param-value>D:\SLIIT\2nd SEM\OOP\project\pro\src\main\webapp\images</param-value>
   </context-param>
 
-  <!-- Additional configurations can go here, if needed -->
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.example.admin.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddAdminServlet</servlet-name>
+        <servlet-class>com.example.admin.AddAdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddAdminServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteAdminServlet</servlet-name>
+        <servlet-class>com.example.admin.DeleteAdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteAdminServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateAdminServlet</servlet-name>
+        <servlet-class>com.example.admin.UpdateAdminServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateAdminServlet</servlet-name>
+        <url-pattern>/update-admin</url-pattern>
+    </servlet-mapping>
+
 </web-app>
