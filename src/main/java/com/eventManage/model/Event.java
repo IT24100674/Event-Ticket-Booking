@@ -29,32 +29,16 @@ public class Event {
         return date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
-
     public String getLocation() {
         return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
     }
 
     public String getTicketPrice() {
         return ticketPrice;
     }
 
-    public void setTicketPrice(String ticketPrice) {
-        this.ticketPrice = ticketPrice;
-    }
-
     public String getImageName() {
         return imageName;
-    }
-
-    public void setImageName(String imageName) {
-        this.imageName = imageName;
     }
 }
 
