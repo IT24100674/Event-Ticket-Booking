@@ -21,10 +21,8 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
         String role = request.getParameter("role"); // "admin" or "user"
 
-        // File path for storing users
         String filePath = "C:\\Users\\MSI\\Desktop\\final project\\Users.txt";
 
-        // Determine the correct user type
         User user;
         if ("admin".equalsIgnoreCase(role)) {
             user = new AdminUser(username, email, password);
@@ -32,10 +30,7 @@ public class RegisterServlet extends HttpServlet {
             user = new RegularUser(username, email, password);
         }
 
-        // Register user
         new UserService().registerUser(user, filePath);
-
-        // Redirect to log
         response.sendRedirect("login.jsp");
     }
 }

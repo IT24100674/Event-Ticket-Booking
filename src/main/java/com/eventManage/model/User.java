@@ -36,6 +36,5 @@ public abstract class User {
         this.password = password;
     }
 
-    // Polymorphism: Each subclass can override this
     public abstract String getRole();
 }

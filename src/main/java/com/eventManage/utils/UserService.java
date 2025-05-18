@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.*;
 
 public class UserService implements UserServiceInterface {
-    // Change to the real path under WEB-INF
+
     public void registerUser(User user, String filePath) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
             writer.write(user.getUsername() + "," + user.getEmail() + "," + user.getPassword() + "," + user.getRole());
@@ -15,7 +15,6 @@ public class UserService implements UserServiceInterface {
         }
     }
 
-    // Authenticate user and return correct user object
     public User authenticate(String username, String password, String filePath) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -37,7 +36,7 @@ public class UserService implements UserServiceInterface {
                 }
             }
         }
-        return null; // No match found
+        return null;
     }
 
     @Override

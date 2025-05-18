@@ -27,24 +27,19 @@ public class UpdateUserServlet extends HttpServlet {
 
         String sessionUsername = currentUser.getUsername();
 
-        // Check username match
         if (!sessionUsername.equals(submittedUsername)) {
             response.sendRedirect("update.jsp?usernameMismatch=1");
             return;
         }
-
-        // Keep old email if blank
         if (newEmail == null || newEmail.isBlank()) {
             newEmail = currentUser.getEmail();
         }
 
-        // Change to WEB-INF for security and portability
         String usersFile = "C:\\Users\\MSI\\Desktop\\final project\\Users.txt";
 
         boolean ok = new UserService().updateUser(sessionUsername, newEmail, newPassword, usersFile);
 
         if (ok) {
-            // Update session user
             currentUser.setEmail(newEmail);
             currentUser.setPassword(newPassword);
             session.setAttribute("user", currentUser);
