@@ -17,7 +17,7 @@ import java.nio.file.Paths;
         maxRequestSize = 1024 * 1024 * 15
 )
 @WebServlet("/createevent")
-public class eventsave extends HttpServlet {
+public class eventSaveServlet extends HttpServlet {
     private static final String FILE_PATH = "D:\\SLIIT\\2nd SEM\\OOP\\project\\pro\\src\\main\\database\\evenPost.txt";
     private static final String IMAGE_UPLOAD_DIR = "D:\\SLIIT\\2nd SEM\\OOP\\project\\pro\\src\\main\\webapp\\images";
 
