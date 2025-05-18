@@ -2,7 +2,7 @@
 package com.eventManage.servlets;
 
 import com.eventManage.model.Event;
-import com.eventManage.utils.WriteM;
+import com.eventManage.utils.writeF;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -16,10 +16,10 @@ import java.nio.file.Paths;
         maxFileSize = 1024 * 1024 * 10,
         maxRequestSize = 1024 * 1024 * 15
 )
-@WebServlet("/createevent")
+@WebServlet("/createPost")
 public class eventSaveServlet extends HttpServlet {
     private static final String FILE_PATH = "D:\\SLIIT\\2nd SEM\\OOP\\project\\pro\\src\\main\\database\\evenPost.txt";
-    private static final String IMAGE_UPLOAD_DIR = "D:\\SLIIT\\2nd SEM\\OOP\\project\\pro\\src\\main\\webapp\\images";
+    private static final String IMAGE_UPLOAD = "D:\\SLIIT\\2nd SEM\\OOP\\project\\pro\\src\\main\\webapp\\images";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -30,18 +30,18 @@ public class eventSaveServlet extends HttpServlet {
         String ticketPrice = request.getParameter("ticketPrice");
 
         Part filePart = request.getPart("eventImage");
-        String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
+        String imageName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
 
-        if (fileName != null && !fileName.isEmpty()) {
-            File uploads = new File(IMAGE_UPLOAD_DIR);
+        if (imageName != null && !imageName.isEmpty()) {
+            File uploads = new File(IMAGE_UPLOAD);
             if (!uploads.exists()) uploads.mkdirs();
 
-            File file = new File(uploads, fileName);
+            File file = new File(uploads, imageName);
             filePart.write(file.getAbsolutePath());
         }
 
-        Event event = new Event(eventName, eventDate, eventLocation, ticketPrice, fileName);
-        WriteM.writeToFile(FILE_PATH, event);
+        Event event = new Event(eventName, eventDate, eventLocation, ticketPrice, imageName);
+        writeF.writeToFile(FILE_PATH, event);
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();

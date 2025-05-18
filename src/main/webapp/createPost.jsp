@@ -46,7 +46,7 @@
 <div class="container">
     <div class="form-container">
         <h3 class="text-center mb-3"><i class="bi bi-calendar-event"></i> Create an Event</h3>
-        <form id="eventForm" action="<%= request.getContextPath() %>/createevent" method="post" enctype="multipart/form-data">
+        <form id="eventForm" action="<%= request.getContextPath() %>/createPost" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label"><i class="bi bi-pencil-square"></i> Event Title</label>
                 <input type="text" class="form-control" id="eventTitle" name="eventName" placeholder="Enter event title" required>

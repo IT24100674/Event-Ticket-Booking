@@ -5,7 +5,7 @@ import com.eventManage.model.Event;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class WriteM {
+public class writeF {
 
     // Generic method to write any data to a specified file
     public static void writeToFile(String filePath, Event event) {

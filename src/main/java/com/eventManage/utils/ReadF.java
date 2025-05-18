@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileParser {
+public class ReadF {
 
-    public static List<Event> readAndParseFile(String filePath) {
+    public static List<Event> readFile(String filePath) {
         List<Event> events = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
