@@ -18,7 +18,7 @@ public class HomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        List<Event> events = FileParser.readAndParseFile("D:\\SLIIT\\2nd SEM\\OOP\\project\\pro\\src\\main\\database\\evenPost.txt");
+        List<Event> events = FileParser.readAndParseFile("C:\\Users\\MSI\\Desktop\\final project\\Event-Ticket-Booking\\src\\main\\database\\evenPost.txt");
 
         request.setAttribute("events", events);
 

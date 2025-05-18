@@ -69,6 +69,7 @@
     <p>Your one-stop solution for all your ticketing needs.</p>
     <a href="login.jsp" class="btn">Login</a>
     <a href="register.jsp" class="btn btn-outline-primary">Register</a>
+    <a href="index.jsp">Back</a>
   </div>
 </div>
 

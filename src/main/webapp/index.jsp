@@ -60,9 +60,10 @@
         <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="Register.jsp">Register</a></li>
             <li class="nav-item">
-                <a href="./Sign%20in.jsp">
-                    <button class="btn btn-primary"><i class="bi bi-person-circle"></i> Sign In</button>
+                <a href="index1.jsp" class="btn btn-primary">
+                    <i class="bi bi-person-circle"></i> Sign In
                 </a>
+
             </li>
         </ul>
     </div>

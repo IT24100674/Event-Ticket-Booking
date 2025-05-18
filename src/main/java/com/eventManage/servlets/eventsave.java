@@ -18,8 +18,8 @@ import java.nio.file.Paths;
 )
 @WebServlet("/createevent")
 public class eventsave extends HttpServlet {
-    private static final String FILE_PATH = "D:\\SLIIT\\2nd SEM\\OOP\\project\\pro\\src\\main\\database\\evenPost.txt";
-    private static final String IMAGE_UPLOAD_DIR = "D:\\SLIIT\\2nd SEM\\OOP\\project\\pro\\src\\main\\webapp\\images";
+    private static final String FILE_PATH = "C:\\Users\\MSI\\Desktop\\final project\\Event-Ticket-Booking\\src\\main\\database\\evenPost.txt";
+    private static final String IMAGE_UPLOAD_DIR = "C:\\Users\\MSI\\Desktop\\final project\\Event-Ticket-Booking\\src\\main\\webapp\\images";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

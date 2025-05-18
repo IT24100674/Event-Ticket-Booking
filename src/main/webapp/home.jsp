@@ -54,7 +54,7 @@
         <ul class="navbar-nav ms-auto">
 
             <li class="nav-item">
-                <a href="./Sign%20in.jsp">
+                <a href="index1.jsp">
                     <button class="btn btn-primary"><i class="bi bi-person-circle"></i> Sign In</button>
                 </a>
             </li>
