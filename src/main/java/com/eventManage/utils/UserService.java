@@ -8,6 +8,7 @@ import java.util.*;
 
 public class UserService implements UserServiceInterface {
 
+    //writing user registration data to the files
     public void registerUser(User user, String filePath) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
             writer.write(user.getUsername() + "," + user.getEmail() + "," + user.getPassword() + "," + user.getRole());
@@ -15,6 +16,7 @@ public class UserService implements UserServiceInterface {
         }
     }
 
+    //user authentication and return if fount not retun  null
     public User authenticate(String username, String password, String filePath) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -24,7 +26,7 @@ public class UserService implements UserServiceInterface {
                     String storedUsername = parts[0].trim();
                     String storedEmail = parts[1].trim();
                     String storedPassword = parts[2].trim();
-                    String storedRole = parts[3].trim().toLowerCase();  // Clean and normalize role
+                    String storedRole = parts[3].trim().toLowerCase();
 
                     if (storedUsername.equals(username) && storedPassword.equals(password)) {
                         if (storedRole.equals("admin")) {
@@ -40,7 +42,9 @@ public class UserService implements UserServiceInterface {
     }
 
 
+    //update email or password
     public boolean updateUser(String username, String newEmail, String newPassword, String filePath) {
+        //use a temporary file
         File original = new File(filePath);
         File temp = new File(filePath + ".tmp");
         boolean updated = false;
@@ -72,8 +76,9 @@ public class UserService implements UserServiceInterface {
                 temp.delete();
                 return false;
             }
-        } else {
-            temp.delete();
+        }
+        else {
+            temp.delete();//username not found
         }
 
         return updated;

@@ -7,9 +7,9 @@ public abstract class User {
     private String password;
 
     public User() {
-        this.username = "";
-        this.email = "";
-        this.password = "";
+        this.username = null;
+        this.email = null;
+        this.password = null;
     }
 
     public User(String username, String email, String password) {
@@ -18,6 +18,7 @@ public abstract class User {
         this.password = password;
     }
 
+    //setters and getters
     public String getUsername() {
 
         return username;

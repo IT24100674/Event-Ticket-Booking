@@ -14,13 +14,14 @@ import java.io.IOException;
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
 
-
+    //get user entered data and handle registration
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        String role = request.getParameter("role"); // "admin" or "user"
+        String role = request.getParameter("role");
 
+        //File path in final project folder
         String filePath = "C:\\Users\\MSI\\Desktop\\final project\\Users.txt";
 
         User user;
@@ -30,7 +31,8 @@ public class RegisterServlet extends HttpServlet {
             user = new RegularUser(username, email, password);
         }
 
-        new UserService().registerUser(user, filePath);
+        UserService service = new UserService();
+        service.registerUser(user, filePath);
         response.sendRedirect("login.jsp");
     }
 }

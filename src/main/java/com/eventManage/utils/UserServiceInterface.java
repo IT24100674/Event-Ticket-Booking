@@ -4,6 +4,8 @@ import com.eventManage.model.User;
 import java.io.IOException;
 
 public interface UserServiceInterface {
+
+    //Declare methods
     void registerUser(User user, String filePath) throws IOException;
 
     User authenticate(String username, String password, String filePath) throws IOException;
