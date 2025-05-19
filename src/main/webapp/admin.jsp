@@ -31,13 +31,13 @@
 </head>
 <body class="bg-primary-50 min-h-screen">
 <div class="max-w-4xl mx-auto px-4 py-12">
-    <!-- Header -->
+    //Header
     <header class="mb-12 text-center">
         <h1 class="text-4xl font-bold text-primary-800 mb-4">Admin Manager</h1>
         <p class="text-primary-600">Manage your administration panel with ease</p>
     </header>
 
-    <!-- Main Content -->
+    //Main Content
     <main class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="p-8">
             <div class="flex flex-col items-center justify-center py-12">
@@ -59,7 +59,7 @@
             </div>
         </div>
 
-        <!-- Footer -->
+        //Footer
         <div class="bg-primary-50 px-8 py-4 border-t border-primary-100">
             <p class="text-center text-primary-600 text-sm">
                 &copy; TicketWaves 2025 | All rights reserved.

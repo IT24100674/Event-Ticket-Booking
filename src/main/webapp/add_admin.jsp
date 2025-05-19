@@ -64,7 +64,7 @@
     <p class="text-primary-600">Fill in the details to create a new admin account</p>
   </header>
 
-  <!-- Form Container -->
+  // Form Container
   <main class="bg-white rounded-xl shadow-md overflow-hidden">
     <form method="POST" action="add" class="p-8" onsubmit="return validatePassword()">
       <!-- Username Field -->
@@ -75,7 +75,7 @@
                placeholder="Enter username">
       </div>
 
-      <!-- Email Field -->
+      // Email Field
       <div class="mb-6">
         <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
         <input type="email" id="email" name="email" required
@@ -83,7 +83,7 @@
                placeholder="Enter email address">
       </div>
 
-      <!-- Password Field -->
+      // Password Field
       <div class="mb-6">
         <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
         <input type="password" id="password" name="password" required
@@ -91,7 +91,7 @@
                placeholder="Enter password">
       </div>
 
-      <!-- Confirm Password Field -->
+      // Confirm Password Field
       <div class="mb-2">
         <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
         <input type="password" id="confirmPassword" name="confirmPassword" required
@@ -99,10 +99,10 @@
                placeholder="Re-enter password">
       </div>
 
-      <!-- Error Message -->
+      // Error Message
       <div id="passwordError" class="mb-6 text-sm text-red-600 hidden"></div>
 
-      <!-- Role Field -->
+      // Role Field
       <div class="mb-8">
         <label for="role" class="block text-sm font-medium text-gray-700 mb-1">Role</label>
         <select id="role" name="role" required
@@ -117,7 +117,7 @@
         </select>
       </div>
 
-      <!-- Submit Button -->
+      // Submit Button
       <div class="flex justify-end">
         <button type="submit"
                 class="px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200">
@@ -129,7 +129,7 @@
       </div>
     </form>
 
-    <!-- Footer -->
+    // Footer
     <div class="bg-primary-50 px-8 py-4 border-t border-primary-100">
       <p class="text-center text-primary-600 text-sm">
         &copy; TicketWaves 2025 | All rights reserved.

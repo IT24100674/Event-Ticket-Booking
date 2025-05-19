@@ -13,6 +13,7 @@ public class AddAdminServlet extends HttpServlet {
         Admin admin = new Admin(username, email, password, role);
         FileUtil.addAdmin(admin, getServletContext());
 
+        //HTTP redirect to the URL path
         response.sendRedirect("admin");
     }
 }

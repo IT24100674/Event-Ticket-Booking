@@ -28,18 +28,18 @@
 </head>
 <body class="bg-primary-50 min-h-screen">
 <div class="max-w-4xl mx-auto px-4 py-12">
-    <!-- Header -->
+    // Header
     <header class="mb-8 text-center">
         <h1 class="text-3xl font-bold text-primary-800 mb-2">Update Admin</h1>
         <p class="text-primary-600">Edit the admin details below</p>
     </header>
 
-    <!-- Form Container -->
+    // Form Container
     <main class="bg-white rounded-xl shadow-md overflow-hidden">
         <form action="update-admin" method="post" class="p-8">
             <input type="hidden" name="originalUsername" value="${param.username}">
 
-            <!-- Username Field -->
+            // Username Field
             <div class="mb-6">
                 <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
                 <input type="text" id="username" name="username" value="${param.username}" required
@@ -47,7 +47,7 @@
                        placeholder="Enter username">
             </div>
 
-            <!-- Email Field -->
+            // Email Field
             <div class="mb-6">
                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
                 <input type="email" id="email" name="email" value="${param.email}" required
@@ -55,7 +55,7 @@
                        placeholder="Enter email address">
             </div>
 
-            <!-- Password Field -->
+            // Password Field
             <div class="mb-6">
                 <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
                 <input type="password" id="password" name="password" value="${param.password}" required
@@ -63,7 +63,7 @@
                        placeholder="Enter password">
             </div>
 
-            <!-- Role Field -->
+            // Role Field
             <div class="mb-8">
                 <label for="role" class="block text-sm font-medium text-gray-700 mb-1">Role</label>
                 <select id="role" name="role" required
@@ -79,7 +79,7 @@
             </div>
 
 
-            <!-- Submit Button -->
+            // Submit Button
             <div class="flex justify-end">
                 <button type="submit"
                         class="px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200">
@@ -91,7 +91,7 @@
             </div>
         </form>
 
-        <!-- Footer -->
+        // Footer
         <div class="bg-primary-50 px-8 py-4 border-t border-primary-100">
             <p class="text-center text-primary-600 text-sm">
                 &copy; TicketWaves 2025 | All rights reserved.

@@ -6,6 +6,7 @@ import java.util.*;
 
 public class FileUtil {
 
+    //reads all admin records from your admins.txt file and returns them as a list of Admin objects.
     public static List<Admin> readAdmins(ServletContext context) throws IOException {
         List<Admin> admins = new ArrayList<>();
         String filePath = context.getRealPath("/admins.txt");
@@ -13,6 +14,7 @@ public class FileUtil {
         File file = new File(filePath);
         if (!file.exists()) return admins;
 
+        //reading the file
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -22,6 +24,7 @@ public class FileUtil {
         return admins;
     }
 
+    //This method writes a list of Admin objects to your admins.txt file
     public static void writeAdmins(List<Admin> admins, ServletContext context) throws IOException {
         String filePath = context.getRealPath("/admins.txt");
 

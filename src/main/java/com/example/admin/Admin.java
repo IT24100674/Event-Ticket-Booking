@@ -6,6 +6,7 @@ public class Admin {
     private String password;
     private String role;
 
+    //constructor
     public Admin(String username, String email, String password, String role) {
         this.username = username;
         this.email = email;
