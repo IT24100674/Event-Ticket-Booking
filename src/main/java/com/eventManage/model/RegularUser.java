@@ -5,7 +5,7 @@ public class RegularUser extends User {
         super(username, email, password);
     }
 
-    @Override
+
     public String getRole() {
         return "Regular User";
     }

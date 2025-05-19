@@ -6,12 +6,12 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-
   <context-param>
-    <description>Location to store uploaded files</description>
     <param-name>file-upload</param-name>
     <param-value>D:\SLIIT\2nd SEM\OOP\project\pro\src\main\webapp\images</param-value>
+    <description>Location to store uploaded files</description>
   </context-param>
 
   <!-- Additional configurations can go here, if needed -->
 </web-app>
+

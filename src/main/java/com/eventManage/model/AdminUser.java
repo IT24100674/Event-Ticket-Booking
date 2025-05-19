@@ -5,8 +5,9 @@ public class AdminUser extends User {
         super(username, email, password);
     }
 
-    @Override
+
     public String getRole() {
+
         return "Admin";
     }
 }

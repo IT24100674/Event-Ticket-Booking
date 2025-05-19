@@ -11,7 +11,7 @@ import java.io.IOException;
 
 @WebServlet("/update")
 public class UpdateUserServlet extends HttpServlet {
-    @Override
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String submittedUsername = request.getParameter("username");
         String newEmail = request.getParameter("email");

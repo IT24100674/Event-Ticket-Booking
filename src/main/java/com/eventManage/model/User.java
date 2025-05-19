@@ -6,6 +6,12 @@ public abstract class User {
     private String email;
     private String password;
 
+    public User() {
+        this.username = "";
+        this.email = "";
+        this.password = "";
+    }
+
     public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
@@ -13,10 +19,12 @@ public abstract class User {
     }
 
     public String getUsername() {
+
         return username;
     }
 
     public void setUsername(String username) {
+
         this.username = username;
     }
 
@@ -25,16 +33,21 @@ public abstract class User {
     }
 
     public void setEmail(String email) {
+
         this.email = email;
     }
 
     public String getPassword() {
+
         return password;
     }
 
     public void setPassword(String password) {
+
         this.password = password;
     }
 
-    public abstract String getRole();
+    public  String getRole(){
+        return "USER";
+    }
 }
