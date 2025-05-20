@@ -8,14 +8,11 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
+
 import java.io.*;
 import java.nio.file.Paths;
 
-@MultipartConfig(
-        fileSizeThreshold = 1024 * 1024 * 1,
-        maxFileSize = 1024 * 1024 * 10,
-        maxRequestSize = 1024 * 1024 * 15
-)
+@MultipartConfig
 @WebServlet("/createPost")
 public class eventSaveServlet extends HttpServlet {
     private static final String FILE_PATH = "D:\\SLIIT\\2nd SEM\\OOP\\project\\pro\\src\\main\\database\\evenPost.txt";
@@ -28,6 +25,7 @@ public class eventSaveServlet extends HttpServlet {
         String eventDate = request.getParameter("eventDate");
         String eventLocation = request.getParameter("eventLocation");
         String ticketPrice = request.getParameter("ticketPrice");
+        String ticketQuantity = request.getParameter("ticketQuantity");
 
         Part filePart = request.getPart("eventImage");
         String imageName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
@@ -40,7 +38,7 @@ public class eventSaveServlet extends HttpServlet {
             filePart.write(file.getAbsolutePath());
         }
 
-        Event event = new Event(eventName, eventDate, eventLocation, ticketPrice, imageName);
+        Event event = new Event(eventName, eventDate, eventLocation, ticketPrice, imageName, ticketQuantity);
         writeF.writeToFile(FILE_PATH, event);
 
         response.setContentType("text/html");

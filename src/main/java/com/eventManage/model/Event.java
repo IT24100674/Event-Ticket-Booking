@@ -1,3 +1,4 @@
+
 package com.eventManage.model;
 
 public class Event {
@@ -6,23 +7,21 @@ public class Event {
     private String location;
     private String ticketPrice;
     private String imageName;
+    private String ticketQuantity;
 
     public Event() {}
 
-    public Event(String name, String date, String location, String ticketPrice, String imageName) {
+    public Event(String name, String date, String location, String ticketPrice, String imageName, String ticketQuantity) {
         this.name = name;
         this.date = date;
         this.location = location;
         this.ticketPrice = ticketPrice;
         this.imageName = imageName;
+        this.ticketQuantity = ticketQuantity;
     }
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getDate() {
@@ -40,5 +39,15 @@ public class Event {
     public String getImageName() {
         return imageName;
     }
+
+    public String getTicketQuantity() {
+        return ticketQuantity;
+    }
+
+    public void setTicketQuantity(String ticketQuantity) {
+        this.ticketQuantity = ticketQuantity;
+    }
 }
+
+
 

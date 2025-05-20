@@ -64,6 +64,11 @@
                 <input type="number" class="form-control" id="eventPrice" name="ticketPrice" placeholder="Enter ticket price" required>
             </div>
             <div class="mb-3">
+                <label class="form-label"><i class="bi bi-ticket-perforated"></i> Ticket Quantity</label>
+                <input type="number" class="form-control" name="ticketQuantity" placeholder="Enter ticket quantity" required>
+            </div>
+
+            <div class="mb-3">
                 <label class="form-label"><i class="bi bi-file-earmark-image"></i> Upload Image</label>
                 <input type="file" class="form-control" id="eventImage" name="eventImage" accept="image/*" required>
                 <img id="imagePreview" class="preview-img mt-2" alt="Event Image Preview">
