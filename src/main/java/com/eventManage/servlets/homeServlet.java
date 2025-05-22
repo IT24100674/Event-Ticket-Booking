@@ -1,8 +1,8 @@
-
 package com.eventManage.servlets;
 
 import com.eventManage.model.Event;
 import com.eventManage.utils.ReadF;
+import com.eventManage.utils.EventSorter;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -19,6 +19,9 @@ public class homeServlet extends HttpServlet {
             throws ServletException, IOException {
 
         List<Event> events = ReadF.readFile("D:\\SLIIT\\2nd SEM\\OOP\\project\\pro\\src\\main\\database\\evenPost.txt");
+        
+
+        EventSorter.mergeSort(events);
 
         request.setAttribute("events", events);
 
